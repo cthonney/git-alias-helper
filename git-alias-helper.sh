@@ -3,6 +3,7 @@
 # Define the file that contains the existing aliases
 ALIAS_FILE="$HOME/.aliases"
 BACKUP_FILE="$HOME/.aliases.bak"
+ZSHRC_FILE="$HOME/.zshrc"
 
 # Define the new git aliases
 git_aliases=(
@@ -54,6 +55,26 @@ restore_aliases() {
   fi
 }
 
+# Function to create .aliases file and update .zshrc file
+create_aliases() {
+  # Create .aliases file if it doesn't exist
+  if [ ! -f "$ALIAS_FILE" ]; then
+    touch "$ALIAS_FILE"
+    echo "Created $ALIAS_FILE"
+  else
+    echo ".aliases file already exists."
+  fi
+
+  # Add the source command to the .zshrc file if it's not already there
+  if ! grep -qF "source $ALIAS_FILE" "$ZSHRC_FILE"; then
+    echo "source $ALIAS_FILE" >> "$ZSHRC_FILE"
+    echo "source $ALIAS_FILE" >> "$ZSHRC_FILE"
+    echo "Added source command to $ZSHRC_FILE"
+  else
+    echo "Source command already present in $ZSHRC_FILE."
+  fi
+}
+
 # Function to add aliases
 add_aliases() {
   # Add each git alias to the ALIAS_FILE, but only if it doesn't already exist there
@@ -83,8 +104,9 @@ add_aliases() {
 show_menu() {
   echo "1) Backup"
   echo "2) Restore"
-  echo "3) Add New aliases"
-  echo "4) Exit and restart zsh"
+  echo "3) Create .aliases file and update .zshrc"
+  echo "4) Add New aliases"
+  echo "5) Exit"
 }
 
 # Main loop
@@ -100,11 +122,13 @@ while true; do
       restore_aliases
       ;;
     3)
-      add_aliases
+      create_aliases
       ;;
     4)
+      add_aliases
+      ;;
+    5)
       echo "Exiting."
-      # Exit the script and restart zsh
       exec zsh
       ;;
     *)
