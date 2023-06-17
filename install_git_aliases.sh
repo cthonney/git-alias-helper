@@ -23,10 +23,15 @@ git_aliases=(
 # Define the new git functions
 git_functions=(
 'gacp() {
-  git add .
-  git commit -m "$1"
-  git push
+   git add .
+   git commit -m "$1"
+   git push origin "$(git_current_branch)"
 } # Add all changes, commit with a message, and push to remote'
+
+'gac() {
+   git add .
+   git commit -m "$1"
+} # Add all changes, commit with a message'
 
 'gsweep() {
   git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
