@@ -43,28 +43,13 @@ Run the script:
 
 The script will display a menu with the following options:
 
-1. Backup
-2. Restore
-3. Add New aliases
-4. Exit and restart zsh
+1. Backup: Creates a backup of your existing aliases file.
+2. Restore: Restores the aliases file from a backup.
+3. Create .aliases file and update .zshrc: Creates the .aliases file if it doesn't exist and adds the source command to .zshrc for automatic loading.
+4. Add New aliases: Adds predefined Git aliases and functions to the aliases file.
+5. Exit: Exits the script and restart the zsh shell.
 
-Choose the appropriate option by entering the corresponding number.
-
-### Option 1: Backup
-
-This option backs up your current aliases file to a backup file. This is useful before making changes to your aliases.
-
-### Option 2: Restore
-
-This option restores your aliases file from the backup. This can be used in case you need to revert to the previously saved aliases.
-
-### Option 3: Add New aliases
-
-This option adds a set of predefined Git aliases and functions to your aliases file. It also sources the `.zshrc` file to make the new aliases and functions available immediately.
-
-### Option 4: Exit and restart zsh
-
-This option exits the script and restarts the zsh shell.
+Choose the desired option by entering the corresponding number when prompted.
 
 ## Contributing
 
