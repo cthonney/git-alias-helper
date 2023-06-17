@@ -24,8 +24,8 @@ Navigate to the `git-alias-helper` directory:
 ```sh
 cd git-alias-helper
 ```
-
-(Optional) Add the `git-alias-helper` directory to your system's PATH.
+```chmod +x install_git_aliases.sh
+```
 
 ## Usage
 
