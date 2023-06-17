@@ -27,7 +27,7 @@ cd git-alias-helper
 Make the script executable:
 
 ```sh
-chmod +x install_git_aliases.sh
+chmod +x git-alias-helper.sh
 ```
 
 ## Usage
