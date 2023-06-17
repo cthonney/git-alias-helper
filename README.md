@@ -63,6 +63,20 @@ This option adds a set of predefined Git aliases and functions to your aliases f
 ### Option 4: Exit and restart zsh
 
 This option exits the script and restarts the zsh shell.
+To add the information about the `git config --global push.autoSetupRemote true` command to the `README.md` file, you can include a section that explains its usage. Here's how you can add it to the README:
+
+## Configuring Automatic Remote Tracking
+
+To streamline your workflow, you can configure Git to automatically set up remote tracking branches when you push new local branches to a remote repository. This can be achieved with the following command:
+
+```
+git config --global push.autoSetupRemote true
+```
+
+This command is particularly useful for keeping your local and remote branches synchronized without manual setup.
+
+
+You can add this markdown code to your `README.md` file where you think it fits best in the structure of your documentation. This will render as a section with a title and a code block, followed by an explanation of the command.
 
 ## Contributing
 
