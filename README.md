@@ -24,8 +24,11 @@ Navigate to the `git-alias-helper` directory:
 ```sh
 cd git-alias-helper
 ```
+Make the script executable:
 
-(Optional) Add the `git-alias-helper` directory to your system's PATH.
+```sh
+chmod +x install_git_aliases.sh
+```
 
 ## Usage
 
