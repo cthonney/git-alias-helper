@@ -34,7 +34,7 @@ git_functions=(
 } # Add all changes, commit with a message'
 
 'gsweep() {
-  git branch --merged | egrep -v "(^\*|master|dev)" | xargs git branch -d
+  git branch --merged $(git defaultBranch) | grep -E -v " $(git defaultBranch)$" | xargs -r git branch -d && git remote prune origin
 } # Delete all branches that have been merged into the current branch'
 )
 
