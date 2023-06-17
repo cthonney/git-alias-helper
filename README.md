@@ -3,7 +3,6 @@
 ## Description
 
 `git-alias-helper` is a Shell script written in scripting language that simplifies the management of Git aliases. It allows you to create, backup, and restore shorthand commands for various Git operations, making your workflow more efficient.
-### [Git Aliases Memo](GitAliasesMemo.md)
 
 ## Getting Started
 
@@ -36,7 +35,7 @@ chmod +x install_git_aliases.sh
 Run the script:
 
 ```sh
-./git-alias-helper.zsh
+./git-alias-helper.sh
 ```
 
 The script will display a menu with the following options:
@@ -63,18 +62,6 @@ This option adds a set of predefined Git aliases and functions to your aliases f
 ### Option 4: Exit and restart zsh
 
 This option exits the script and restarts the zsh shell.
-To add the information about the `git config --global push.autoSetupRemote true` command to the `README.md` file, you can include a section that explains its usage. Here's how you can add it to the README:
-
-## Configuring Automatic Remote Tracking
-
-To streamline your workflow, you can configure Git to automatically set up remote tracking branches when you push new local branches to a remote repository. This can be achieved with the following command:
-
-```
-git config --global push.autoSetupRemote true
-```
-
-This command is particularly useful for keeping your local and remote branches synchronized without manual setup.
-
 
 ## Contributing
 
