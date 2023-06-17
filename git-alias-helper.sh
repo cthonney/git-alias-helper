@@ -66,8 +66,7 @@ create_aliases() {
   fi
 
   # Add the source command to the .zshrc file if it's not already there
-  if ! grep -qF "source $ALIAS_FILE" "$ZSHRC_FILE"; then
-    echo "source $ALIAS_FILE" >> "$ZSHRC_FILE"
+  if ! grep -q ".aliases" "$ZSHRC_FILE"; then
     echo "source $ALIAS_FILE" >> "$ZSHRC_FILE"
     echo "Added source command to $ZSHRC_FILE"
   else
