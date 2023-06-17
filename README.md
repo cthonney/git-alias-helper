@@ -76,8 +76,6 @@ git config --global push.autoSetupRemote true
 This command is particularly useful for keeping your local and remote branches synchronized without manual setup.
 
 
-You can add this markdown code to your `README.md` file where you think it fits best in the structure of your documentation. This will render as a section with a title and a code block, followed by an explanation of the command.
-
 ## Contributing
 
 Contributions are welcome! Please read the CONTRIBUTING.md file for details on our code of conduct, and the process for submitting pull requests to us.
