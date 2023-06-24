@@ -1,6 +1,6 @@
 
 
-## Description
+## Description :)
 
 `git-alias-helper` is a Shell script written in scripting language that simplifies the management of Git aliases. It allows you to create, backup, and restore shorthand commands for various Git operations, making your workflow more efficient.
 
